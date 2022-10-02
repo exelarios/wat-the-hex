@@ -62,7 +62,7 @@ function App() {
       colors.push(generateHexColor());
     }
     setOptions(colors);
-  }, [color]);
+  }, [color, correct]);
 
   const handleColorOption = useCallback((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     const element = event.target as HTMLButtonElement;
@@ -97,8 +97,7 @@ function App() {
         </button>
       );
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [color, options, handleColorOption]);
+  }, [options, handleColorOption]);
 
   return (
     <div className="App">
