@@ -8,6 +8,9 @@ import React, {
 import './App.css';
 
 function generateHexColor(): string {
+  // RGB is 8-bit (1 byte) for each values
+  // Since each color is 8-bit, there are 24 bits (8^3).
+  // 24 bits makes up 16777216 (24^3) possible colors.
   const value = Math.floor(Math.random() * 16777216).toString(16);
   return "#000000".slice(0, -value.length) + value;
 }
